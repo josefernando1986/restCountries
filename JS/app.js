@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 function copyTemplate(country) {
     const countryTemplate = document.importNode(template.content, true);
     const article = countryTemplate.querySelector('article');
-    
+
     const img = article.querySelector('img');
     img.setAttribute('src', `${country.flag}`);
 
@@ -17,13 +17,13 @@ function copyTemplate(country) {
     name.innerText = country.name;
 
     const population = article.querySelector('#population');
-    population.innerText = country.population;
+    population.innerText = `Population: ${country.population}`;
 
     const region = article.querySelector('#region');
-    region.innerText = country.region;
+    region.innerText = `Región: ${country.region}`;
 
     const capital = article.querySelector('#capital');
-    capital.innerText = country.capital;
+    capital.innerText = `Capital: ${country.capital}`;
 
     return article;
 }
